@@ -1,0 +1,10 @@
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.exe.config
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.exe
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.pdb
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csprojResolveAssemblyReference.cache
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Form1.resources
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Properties.Resources.resources
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.GenerateResource.cache
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.CoreCompileInputs.cache
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.exe
+c:\users\juan daniel\source\repos\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.pdb
