@@ -115,19 +115,43 @@ namespace MochilaGenetico
         public void restricion()
         {
             sumatoria = 0;
+            double ganancia;
             foreach (Item item in Individuos)
             {
+                ganancia = 0;
                 //lbPruebas.Items.Add(item.getValor());
-                if (item.getPeso() < capacidadMochila)
+                if (item.getPeso() <= capacidadMochila)
                 {
                     item.setGanancia(funcion(item.getValor()));
                 }
                 else
                 {
-                    item.setGanancia(0);
+                    //item.setGanancia(0);
+                    ganancia = (funcion(item.getValor()))-penalizacion(item.getValor());//ganancia con penalizacion
+                    item.setGanancia(ganancia);
                 }
                 sumatoria += item.getGanacia();
             }
+        }
+        public double penalizacion(string items)
+        {
+            double p=0,pen=0,mp=0;
+            for(int i = 0; i < items.Length; i++)
+            {
+                if (items[i] == '1')
+                {
+                    if (mp<(itemsGanancia[i]/itemsPeso[i]))
+                    {
+                        mp = itemsGanancia[i] / itemsPeso[i];
+                    }
+                }
+            }
+            p = mp;
+            for (int i = 0; i < items.Length; i++)
+            {
+                pen += p * (items[i] * itemsPeso[i] - capacidadMochila);
+            }
+            return pen;
         }
         public double funcion(String item)
         {
@@ -168,23 +192,23 @@ namespace MochilaGenetico
         public void mostrar()
         {
             int i = 0;
-           //foreach(Item item in Individuos)
-           // {
-           //     lbPruebas.Items.Add(item.getValor()+"  "+item.getPeso()+"  "+ item.getGanacia()+"  "+Fnorm[i]+"  "+Acumulado[i]);
-           //     i++;
-           // }
-           //foreach(Item hijo in Hijos)
-           // {
-           //     lbPruebas.Items.Add(hijo.getValor());
-           // }
-           //foreach(String mutado in Mutacion)
-           // {
-           //     lbPruebas.Items.Add(mutado);
-           // }
-           foreach(Item indi in Individuos)
+            foreach (Item item in Individuos)
             {
-                lbPruebas.Items.Add(indi.getValor());
+                lbPruebas.Items.Add(item.getValor() + "  " + item.getPeso() + "  " + item.getGanacia() + "  " + Fnorm[i] + "  " + Acumulado[i]);
+                i++;
             }
+            //foreach(Item hijo in Hijos)
+            // {
+            //     lbPruebas.Items.Add(hijo.getValor());
+            // }
+            //foreach(String mutado in Mutacion)
+            // {
+            //     lbPruebas.Items.Add(mutado);
+            // }
+            //foreach(Item indi in Individuos)
+            // {
+            //     lbPruebas.Items.Add(indi.getValor());
+            // }
         }
         public void ruleta()
         {
@@ -305,7 +329,7 @@ namespace MochilaGenetico
                 aux = "";
             }
         }
-        public void reinicio()
+        public void reinicio()//se limpian los individuos de agregan los que estan en mutacion a individuos y se limpian los demas valores
         {
             //lbPruebas.Items.Clear();
             Individuos.Clear();
@@ -321,7 +345,7 @@ namespace MochilaGenetico
             Acumulado.Clear();
             Mutacion.Clear();
         }
-        public void calcularMayor()
+        public void calcularMayor()//se calcula la mejor convinacion de items
         {
             foreach(Item individuo in Individuos)
             {
@@ -331,7 +355,7 @@ namespace MochilaGenetico
                 }
             }
         }
-        public void genetico()
+        public void genetico()//se llaman todos los metodos para el algoritmo genetico
         {
             int vueltas = Convert.ToInt32(tbVueltas.Text);
             inicializacion();
@@ -343,12 +367,12 @@ namespace MochilaGenetico
             }
             
                 restricion();//se aplica la restricion y se calcula la ganancia y la sumatoria
-                fnorm();
+                fnorm();mostrar();
                 ruleta();
                 cruce();
                 mutacion();
                 reinicio();
-                mostrar();
+                
                 lbres.Text ="Combinacion de item: "+ mayor.getValor() + "\n Peso: " + mayor.getPeso() + "\n Ganancia: " + mayor.getGanacia();
                 vueltas--;
             } while (vueltas!=0);
