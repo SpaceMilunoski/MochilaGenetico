@@ -72,6 +72,7 @@ namespace MochilaGenetico
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                tbDirectorio.Text = "";
             }
         }
         public void inicializacion()
@@ -380,10 +381,43 @@ namespace MochilaGenetico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            limpieza();
-            genetico();
-           
-            
+            if (tbDirectorio.Text != "" && tbPC.Text != "" && tbPM.Text != "" && tbPoblacion.Text != "" && tbVueltas.Text != "")
+            {
+                if (Convert.ToInt32(tbPoblacion.Text) % 2 == 0)
+                {
+                    if (Convert.ToDouble(tbPC.Text) >= 0.65 && Convert.ToDouble(tbPC.Text) <= 0.80)
+                    {
+                        if (Convert.ToDouble(tbPM.Text) >= 0.001 && Convert.ToDouble(tbPM.Text) <= 0.01)
+                        {
+                            if (Convert.ToInt32(tbVueltas.Text) > 0)
+                            {
+                                limpieza();
+                                genetico();
+                            }
+                            else
+                            {
+                                MessageBox.Show("El numero de vueltas debe ser mayor a 0", "Error");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("La probabilidad de mutacion debe ser mayor o igual a 0.001 y menor o igual a 0.01", "Error");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("La probabilidad de cruce debe ser mayor o igual a 0.65 y menor o igual a 0.80", "Error");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("El numero de población debe ser par", "Error");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Falta llenar algun dato", "Error");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

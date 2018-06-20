@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbres = new System.Windows.Forms.Label();
             this.lbPruebas = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tbPoblacion = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.tbDirectorio = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.lbres = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,14 @@
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultados";
+            // 
+            // lbres
+            // 
+            this.lbres.AutoSize = true;
+            this.lbres.Location = new System.Drawing.Point(6, 36);
+            this.lbres.Name = "lbres";
+            this.lbres.Size = new System.Drawing.Size(0, 13);
+            this.lbres.TabIndex = 1;
             // 
             // lbPruebas
             // 
@@ -167,6 +175,7 @@
             // 
             // tbDirectorio
             // 
+            this.tbDirectorio.Enabled = false;
             this.tbDirectorio.Location = new System.Drawing.Point(318, 210);
             this.tbDirectorio.Name = "tbDirectorio";
             this.tbDirectorio.Size = new System.Drawing.Size(138, 20);
@@ -193,14 +202,6 @@
             this.label6.Size = new System.Drawing.Size(212, 13);
             this.label6.TabIndex = 39;
             this.label6.Text = "Selecione la carpeta que contiene los items";
-            // 
-            // lbres
-            // 
-            this.lbres.AutoSize = true;
-            this.lbres.Location = new System.Drawing.Point(6, 36);
-            this.lbres.Name = "lbres";
-            this.lbres.Size = new System.Drawing.Size(0, 13);
-            this.lbres.TabIndex = 1;
             // 
             // Form1
             // 
