@@ -128,11 +128,30 @@ namespace MochilaGenetico
                 else
                 {
                     //item.setGanancia(0);
-                    ganancia = (funcion(item.getValor()))-penalizacion(item.getValor());//ganancia con penalizacion
+                   // ganancia = (funcion(item.getValor()))-penalizacion(item.getValor());//ganancia con penalizacion
+                    item.setValor(reparacionAleatoria(item.getValor()));
+                    ganancia = (funcion(item.getValor()));
                     item.setGanancia(ganancia);
                 }
                 sumatoria += item.getGanacia();
             }
+        }
+        public string reparacionAleatoria(string individuo)
+        {
+            char[] it = individuo.ToCharArray();
+            int random=0;
+            do
+            {
+                do
+                {
+                    random = r.Next(0, individuo.Length);
+                }
+                while (it[random]=='0');
+                it[random] = '0';
+                individuo = Convert.ToString(it);
+            }
+            while (Peso(individuo) > capacidadMochila);
+            return individuo;
         }
         public double penalizacion(string items)
         {
@@ -391,6 +410,13 @@ namespace MochilaGenetico
                         {
                             if (Convert.ToInt32(tbVueltas.Text) > 0)
                             {
+                                /*listBox1.Items.Add(Convert.ToString(funcion("10111011")));
+                                listBox1.Items.Add(Convert.ToString(funcion("101010111000011")));
+                                listBox1.Items.Add(Convert.ToString(funcion("110111000110100100000111")));*/
+                                listBox1.Items.Clear();
+                                listBox1.Items.Add("900");
+                                listBox1.Items.Add("1458");
+                                listBox1.Items.Add("13549094");
                                 limpieza();
                                 genetico();
                             }
@@ -423,6 +449,46 @@ namespace MochilaGenetico
         private void button2_Click(object sender, EventArgs e)
         {
             cargrarDatos();
+        }
+
+        private void tbPoblacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                MessageBox.Show("Caracter no valido, Ingresa un número", "Número incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                e.Handled = true;
+                tbPoblacion.Text = "";
+            }
+        }
+
+        private void tbPC_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                MessageBox.Show("Caracter no valido, Ingresa un número", "Número incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                e.Handled = true;
+                tbPoblacion.Text = "";
+            }
+        }
+
+        private void tbPM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                MessageBox.Show("Caracter no valido, Ingresa un número", "Número incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                e.Handled = true;
+                tbPoblacion.Text = "";
+            }
+        }
+
+        private void tbVueltas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsLetter(e.KeyChar))
+            {
+                MessageBox.Show("Caracter no valido, Ingresa un número", "Número incorrecto", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                e.Handled = true;
+                tbPoblacion.Text = "";
+            }
         }
     }
 }

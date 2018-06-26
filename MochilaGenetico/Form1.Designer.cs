@@ -45,6 +45,7 @@
             this.tbDirectorio = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,6 +125,7 @@
             this.tbPoblacion.Name = "tbPoblacion";
             this.tbPoblacion.Size = new System.Drawing.Size(100, 20);
             this.tbPoblacion.TabIndex = 18;
+            this.tbPoblacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPoblacion_KeyPress);
             // 
             // label3
             // 
@@ -140,6 +142,7 @@
             this.tbPC.Name = "tbPC";
             this.tbPC.Size = new System.Drawing.Size(100, 20);
             this.tbPC.TabIndex = 20;
+            this.tbPC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPC_KeyPress);
             // 
             // tbVueltas
             // 
@@ -147,6 +150,7 @@
             this.tbVueltas.Name = "tbVueltas";
             this.tbVueltas.Size = new System.Drawing.Size(100, 20);
             this.tbVueltas.TabIndex = 36;
+            this.tbVueltas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbVueltas_KeyPress);
             // 
             // label16
             // 
@@ -172,6 +176,7 @@
             this.tbPM.Name = "tbPM";
             this.tbPM.Size = new System.Drawing.Size(100, 20);
             this.tbPM.TabIndex = 33;
+            this.tbPM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPM_KeyPress);
             // 
             // tbDirectorio
             // 
@@ -203,12 +208,21 @@
             this.label6.TabIndex = 39;
             this.label6.Text = "Selecione la carpeta que contiene los items";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(391, 18);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(149, 69);
+            this.listBox1.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(552, 330);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.tbVueltas);
@@ -253,6 +267,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lbres;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
