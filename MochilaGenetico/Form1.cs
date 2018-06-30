@@ -129,7 +129,7 @@ namespace MochilaGenetico
                 {
                     //item.setGanancia(0);
                    // ganancia = (funcion(item.getValor()))-penalizacion(item.getValor());//ganancia con penalizacion
-                    item.setValor(reparacionAleatoria(item.getValor()));
+                    item.setValor(reparacionVoraz(item.getValor()));
                     ganancia = (funcion(item.getValor()));
                     item.setGanancia(ganancia);
                 }
@@ -151,6 +151,18 @@ namespace MochilaGenetico
                 individuo = Convert.ToString(it);
             }
             while (Peso(individuo) > capacidadMochila);
+            return individuo;
+        }
+        public string reparacionVoraz(string individuo)
+        {
+            char[] it = individuo.ToCharArray();
+            int id = 0;
+            do
+            {
+                id = funcionMenor(individuo);
+                it[id] = '0';
+                individuo = Convert.ToString(it);
+            } while (Peso(individuo) > capacidadMochila);
             return individuo;
         }
         public double penalizacion(string items)
@@ -186,6 +198,23 @@ namespace MochilaGenetico
                 cont++;
             }
             return ganancia;
+        }
+        public int funcionMenor(String item)
+        {
+            int cont = 0;
+            int menor = 0;
+            foreach(char p in item)
+            {
+                if (p == '1')
+                {
+                    if(itemsGanancia[cont]/itemsPeso[cont]< itemsGanancia[menor] / itemsPeso[menor])
+                    {
+                        menor = cont;
+                    }
+                }
+                cont++;
+            }
+            return Convert.ToInt32(menor);
         }
         public void fnorm()
         {

@@ -17,3 +17,13 @@ C:\Users\Toño\Desktop\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico
 C:\Users\Toño\Desktop\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Form1.resources
 C:\Users\Toño\Desktop\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Properties.Resources.resources
 C:\Users\Toño\Desktop\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.GenerateResource.Cache
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.exe.config
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.exe
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.pdb
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csprojResolveAssemblyReference.cache
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Form1.resources
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Properties.Resources.resources
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.GenerateResource.Cache
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.CoreCompileInputs.cache
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.exe
+C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.pdb
