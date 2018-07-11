@@ -128,10 +128,21 @@ namespace MochilaGenetico
                 else
                 {
                     //item.setGanancia(0);
-                   // ganancia = (funcion(item.getValor()))-penalizacion(item.getValor());//ganancia con penalizacion
-                    item.setValor(reparacionVoraz(item.getValor()));
-                    ganancia = (funcion(item.getValor()));
-                    item.setGanancia(ganancia);
+                    // ganancia = (funcion(item.getValor()))-penalizacion(item.getValor());//ganancia con penalizacion
+                    //item.setValor(reparacionVoraz(item.getValor()));
+                    //ganancia = (funcion(item.getValor()));
+                    //item.setGanancia(ganancia);
+                    String individuo = propio(item);
+                    if (individuo == item.getValor())
+                    {
+                        item.setGanancia(0);
+                    }
+                    else
+                    {
+                        item.setValor(individuo);
+                        item.setPeso(Peso(individuo));
+                        item.setGanancia(funcion(individuo));
+                    }
                 }
                 sumatoria += item.getGanacia();
             }
@@ -185,6 +196,19 @@ namespace MochilaGenetico
             }
             return pen;
         }
+        private String propio(Item individio)
+        {
+            char[] aux = individio.getValor().ToCharArray();
+            for (int i=0;i<individio.getValor().Length;i++)
+            {
+                if ((individio.getPeso()-itemsPeso[i]) <= capacidadMochila)
+                {
+                    aux[i] = '0';
+                    break;
+                }
+            }
+            return new String(aux);
+        }
         public double funcion(String item)
         {
             double ganancia=0;
@@ -230,6 +254,7 @@ namespace MochilaGenetico
         }
         public void limpieza()
         {
+            mayor = new Item();
             lbPruebas.Items.Clear();
             Individuos.Clear();
             Padres.Clear();

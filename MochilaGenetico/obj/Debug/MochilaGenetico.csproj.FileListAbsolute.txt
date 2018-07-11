@@ -27,3 +27,13 @@ C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\Moc
 C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.CoreCompileInputs.cache
 C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.exe
 C:\Users\PROPIETARIO\Documents\Git\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.pdb
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.exe.config
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.exe
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\bin\Debug\MochilaGenetico.pdb
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csprojResolveAssemblyReference.cache
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Form1.resources
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.Properties.Resources.resources
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.GenerateResource.cache
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.csproj.CoreCompileInputs.cache
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.exe
+C:\Users\Juan Daniel\Documents\proyectos noveno\AlgoritmogeneticoNuestra version\MochilaGenetico\MochilaGenetico\obj\Debug\MochilaGenetico.pdb
