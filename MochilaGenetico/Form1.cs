@@ -201,10 +201,13 @@ namespace MochilaGenetico
             char[] aux = individio.getValor().ToCharArray();
             for (int i=0;i<individio.getValor().Length;i++)
             {
-                if ((individio.getPeso()-itemsPeso[i]) <= capacidadMochila)
+                if (aux[i]=='1')
                 {
-                    aux[i] = '0';
-                    break;
+                    if ((individio.getPeso() - itemsPeso[i]) <= capacidadMochila)
+                    {
+                        aux[i] = '0';
+                        break;
+                    }
                 }
             }
             return new String(aux);
